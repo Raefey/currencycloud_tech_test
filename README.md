@@ -1,4 +1,4 @@
-### Scenario
+Scenario
 
 Coolpay is a new company that allows to easily send money to friends through their API.
 
@@ -8,7 +8,24 @@ You can find Coolpay documentation here: http://docs.coolpayapi.apiary.io/
 
 You will write a small app that uses Coolplay API in Ruby. The app should be able do the following:
 
-- Authenticate to Coolpay API
-- Add recipients
-- Send them money
-- Check whether a payment was successful
+
+
+### User stories
+
+```
+As a User
+I want to be able to Authenticate to Coolpay API
+So other people cannot send my money
+
+As a User
+I want to be able to Add recipients
+So I can list my friends easily
+
+As a User
+I want to be able to Send Money
+So I can save time by not using my bank
+
+As a User
+I want to be send a confirmation message when a payment is successful
+So that I'm not worrying about losing money
+```
