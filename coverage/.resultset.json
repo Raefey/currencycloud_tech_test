@@ -1,7 +1,15 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/Raefe/Documents/Coding work/Projects/tech_tests/currencycloud_tech_test/spec/features/index_spec.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ]
     },
-    "timestamp": 1529323506
+    "timestamp": 1529326591
   }
 }
