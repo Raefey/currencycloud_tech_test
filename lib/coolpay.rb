@@ -14,9 +14,8 @@ class Coolpay
   def values
     username = ENV["API_USERNAME"]
     api_key = ENV["API_KEY"]
-    '{
-      "username": #{username}, "apikey", #{api_key}
-    }'
+    hash = {"username": username, "apikey", api_key}
+    return "#{hash}"
   end
 
   def headers
