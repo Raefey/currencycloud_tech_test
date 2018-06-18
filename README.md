@@ -29,3 +29,9 @@ As a User
 I want to be send a confirmation message when a payment is successful
 So that I'm not worrying about losing money
 ```
+
+### Views
+
+![Index](./pictures/index_view.png)
+
+![Payments](./pictures/payments_view.png)
