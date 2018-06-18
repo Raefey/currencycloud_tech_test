@@ -1,4 +1,4 @@
-Scenario
+## Scenario
 
 Coolpay is a new company that allows to easily send money to friends through their API.
 
