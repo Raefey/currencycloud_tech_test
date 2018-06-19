@@ -16,7 +16,7 @@ class Api
   end
 
   def recipient_list
-    response = RestClient.get 'https://coolpay.herokuapp.com/api/recipients', recipient_headers
+    response = RestClient.get 'https://coolpay.herokuapp.com/api/recipients', authorized_headers
     p eval(response.body)[:recipients]
   end
 
@@ -31,7 +31,7 @@ class Api
     return {:content_type => 'application/json'}
   end
 
-  def recipient_headers
+  def authorized_headers
     return {
       :content_type => "application/json",
       :authorization => "Bearer #{token}"
