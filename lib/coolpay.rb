@@ -1,25 +1,23 @@
 require 'envyable'
+require 'rest_client'
 Envyable.load('config/env.yml')
 
 class Coolpay
 
-
-  def self.get_data(url = 'https://coolpay.herokuapp.com/api/login', http_class = Net::HTTP)
-    uri = URI.parse(url)
-    response = http_class.get_response(uri)
-    JSON.parse(response.body)
+  def response(url = 'https://coolpay.herokuapp.com/api/login')
+    p 'rafe'
   end
 
   private
   def values
     username = ENV["API_USERNAME"]
     api_key = ENV["API_KEY"]
-    hash = {"username": username, "apikey", api_key}
-    return "#{hash}"
+    account_hash = {"username": username, "apikey": api_key}
+    return "#{account_hash}"
   end
 
   def headers
-    {:content_type => 'application/json'}
+    return {:content_type => 'application/json'}
   end
 
 end

@@ -1,6 +1,6 @@
 require 'sinatra/base'
 
-class Coolpay < Sinatra::Base
+class Fakebook < Sinatra::Base
 
   get '/' do
     erb(:index)

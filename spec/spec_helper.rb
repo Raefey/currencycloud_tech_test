@@ -7,7 +7,7 @@ require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
 
-Capybara.app = Coolpay
+Capybara.app = Fakebook
 
 require 'simplecov'
 require 'simplecov-console'
