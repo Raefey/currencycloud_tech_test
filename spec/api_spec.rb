@@ -12,7 +12,7 @@ describe Api do
   describe 'recipient_list' do
     it 'should return an array' do
       api.authentication_request
-      expect(api.recipient_list).to eq([])
+      expect(api.recipient_list).kind_of?(Array)
     end
   end
 end
