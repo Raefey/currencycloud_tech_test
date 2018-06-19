@@ -4,19 +4,20 @@ Envyable.load('config/env.yml')
 
 class Api
 
-  attr_reader :token
+  attr_reader :token, :url
 
   def initialize
     @token = token
+    @url = 'https://coolpay.herokuapp.com/api/'
   end
 
   def authentication_request
-    response = RestClient.post 'https://coolpay.herokuapp.com/api/login', values, login_headers
+    response = RestClient.post "#{url}login", values, login_headers
     @token = eval(response.body)[:token]
   end
 
   def recipient_list
-    response = RestClient.get 'https://coolpay.herokuapp.com/api/recipients', authorized_headers
+    response = RestClient.get "#{url}recipients", authorized_headers
     p eval(response.body)[:recipients]
   end
 

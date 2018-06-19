@@ -4,7 +4,9 @@ require_relative 'api.rb'
 class Fakebook < Sinatra::Base
 
   get '/' do
-    api = Api.new.authentication_request
+    api = Api.new
+    api.authentication_request
+    @recipients = api.recipient_list
     erb(:index)
   end
 
