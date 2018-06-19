@@ -16,10 +16,10 @@
   </head>
   <body>
     Recipients
-    <% @recipients.each do |recipient| %>
-      <div> <%=recipient.name%>
+
+      <div> <%=@recipients%>
       </div>
-    <%end%>
+
 
     <form action='/new-recipient' method='post'>
       <input type="text" name="new_recipient">

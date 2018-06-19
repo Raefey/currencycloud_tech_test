@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require_relative 'api.rb'
+require_relative 'recipients.rb'
 
 class Fakebook < Sinatra::Base
 
@@ -11,6 +12,7 @@ class Fakebook < Sinatra::Base
   end
 
   post '/new-recipient' do
+    contact = Recipient.new(params['new_recipient'], @token)
     redirect('/')
   end
 
