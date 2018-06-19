@@ -6,7 +6,7 @@ describe Coolpay do
 
   describe 'response' do
     it 'should return something' do
-      expect(coolpay.response).not_to be_nil
+      expect(coolpay.response).to be_truthy
     end
   end
 end
