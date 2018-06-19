@@ -5,15 +5,14 @@ Envyable.load('config/env.yml')
 class Coolpay
 
   def response(url = 'https://coolpay.herokuapp.com/api/login')
-    p 'rafe'
+    RestClient.post url, values, headers
   end
 
   private
   def values
     username = ENV["API_USERNAME"]
     api_key = ENV["API_KEY"]
-    account_hash = {"username": username, "apikey": api_key}
-    return "#{account_hash}"
+    {"username": username, "apikey": api_key}
   end
 
   def headers
