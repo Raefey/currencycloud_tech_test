@@ -2,10 +2,20 @@ require 'envyable'
 require 'rest_client'
 Envyable.load('config/env.yml')
 
-class Coolpay
+class Authentication
 
   def response(url = 'https://coolpay.herokuapp.com/api/login')
     RestClient.post url, values, headers
+  end
+
+  def recipients
+    headers = {
+      :content_type => 'application/json',
+      :authorization => 'Bearer 12345.yourtoken.67890'
+    }
+
+    response = RestClient.get 'https://coolpay.herokuapp.com/api/recipients', headers
+    puts response
   end
 
   private
@@ -18,5 +28,4 @@ class Coolpay
   def headers
     return {:content_type => 'application/json'}
   end
-
 end
