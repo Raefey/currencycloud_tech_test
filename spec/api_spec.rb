@@ -9,10 +9,4 @@ describe Api do
       expect(api.authentication_request).to be_truthy
     end
   end
-  describe 'recipient_list' do
-    it 'should return an array' do
-      api.authentication_request
-      expect(api.recipient_list).kind_of?(Array)
-    end
-  end
 end

@@ -14,7 +14,7 @@ class Fakebook < Sinatra::Base
 
   get '/recipients' do
     @api = session[:api]
-    @recipients = @api.recipient_list
+    @recipients = RecipientList.new(session[:token]).all
     erb(:recipients)
   end
 

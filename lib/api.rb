@@ -12,13 +12,8 @@ class Api
   end
 
   def authentication_request
-    response = RestClient.post "#{url}login", values, login_headers
+    response = RestClient.post "#{url}login", values, headers
     @token = eval(response.body)[:token]
-  end
-
-  def recipient_list
-    response = RestClient.get "#{url}recipients", authorized_headers
-    p eval(response.body)[:recipients]
   end
 
   private
@@ -28,14 +23,7 @@ class Api
     {"username": username, "apikey": api_key}
   end
 
-  def login_headers
+  def headers
     return {:content_type => 'application/json'}
-  end
-
-  def authorized_headers
-    return {
-      :content_type => "application/json",
-      :authorization => "Bearer #{token}"
-    }
   end
 end
