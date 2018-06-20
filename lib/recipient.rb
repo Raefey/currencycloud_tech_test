@@ -4,9 +4,9 @@ class Recipient
 
   attr_reader :name, :token, :url
 
-  def initialize(name, token, url = 'https://coolpay.herokuapp.com/api/')
-    @name = name
+  def initialize(token, name, url = 'https://coolpay.herokuapp.com/api/')
     @token = token
+    @name = name
     @url = url
   end
 
