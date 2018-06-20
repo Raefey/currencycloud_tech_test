@@ -6,9 +6,9 @@ class Api
 
   attr_reader :token, :url
 
-  def initialize
+  def initialize(url = 'https://coolpay.herokuapp.com/api/')
     @token = token
-    @url = 'https://coolpay.herokuapp.com/api/'
+    @url = url
   end
 
   def authentication_request
