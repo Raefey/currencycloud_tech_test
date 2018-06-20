@@ -9,7 +9,7 @@ describe Payment do
   before(:each) do
     api = Api.new
     @token = api.authentication_request
-    recipient = Recipient.new(@token, 'raefe')
+    recipient = Recipient.new(@token, 'raefe', 'https://private-e7ba6d-coolpayapi.apiary-mock.com/api/')
     @unique_id = recipient.create[:recipient][:id]
   end
 
