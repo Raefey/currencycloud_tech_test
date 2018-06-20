@@ -17,8 +17,9 @@
   <body>
     Recipients
 
-      <div> <%=@recipients%>
-      </div>
+      <% @recipients.each do |recipient| %>
+        <div><%=recipient[:name]%></div>
+    <%end%>
 
 
     <form action='/new-recipient' method='post'>
