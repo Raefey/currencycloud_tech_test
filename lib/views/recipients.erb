@@ -1,0 +1,30 @@
+<style>
+
+#parent{
+    padding: 0px, auto;
+    width: 50%;
+    margin: auto;
+}
+
+</style>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Fakebook</title>
+  </head>
+  <body>
+    Recipients
+
+      <% @recipients.each do |recipient| %>
+        <div><%=recipient[:name]%></div>
+    <%end%>
+
+
+    <form action='/new-recipient' method='post'>
+      <input type="text" name="new_recipient">
+      <input type="submit" value="New Recipient">
+    </form>
+  </body>
+</html>

@@ -4,15 +4,23 @@ require_relative 'recipient.rb'
 
 class Fakebook < Sinatra::Base
 
+  enable :sessions
+
   get '/' do
-    api = Api.new
-    @token = api.authentication_request
-    @recipients = api.recipient_list
+    session[:api] = Api.new
+    session[:token] = session[:api].authentication_request
     erb(:index)
+  end
+
+  get '/recipients' do
+    @api = session[:api]
+    @recipients = @api.recipient_list
+    erb(:recipients)
   end
 
   post '/new-recipient' do
     contact = Recipient.new(params['new_recipient'], @token)
+    contact.create
     redirect('/')
   end
 

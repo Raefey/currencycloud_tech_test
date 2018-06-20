@@ -1,6 +1,6 @@
 feature 'Testing index' do
-  scenario 'Can run and display page content' do
+  scenario 'Can run and display button' do
     visit('/')
-    expect(page).to have_content 'Recipients'
+    expect(page).to have_button 'Login'
   end
 end
