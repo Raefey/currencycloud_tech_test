@@ -8,3 +8,9 @@ before_install:
 env:
   global:
     - CC_TEST_REPORTER_ID=<cfd615f5c5b6cd83e1971160eed6d1ae1d3c79e71ab464addca3e8c1b4a154d6>
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
