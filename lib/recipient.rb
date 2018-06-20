@@ -2,14 +2,17 @@ require 'rest_client'
 
 class Recipient
 
-  attr_reader :name
+  attr_reader :name, :token, :url
 
-  def initialize(name, token)
+  def initialize(name, token, url = 'https://coolpay.herokuapp.com/api/')
     @name = name
+    @token = token
+    @url = url
   end
 
   def create
-    RestClient.post 'https://coolpay.herokuapp.com/api/recipients', values, headers
+    response = RestClient.post "#{url}recipients", values, headers
+    p response
   end
 
   private

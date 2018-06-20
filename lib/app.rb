@@ -1,6 +1,6 @@
 require 'sinatra/base'
 require_relative 'api.rb'
-require_relative 'recipients.rb'
+require_relative 'recipient.rb'
 
 class Fakebook < Sinatra::Base
 
