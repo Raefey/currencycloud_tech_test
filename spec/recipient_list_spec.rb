@@ -9,8 +9,8 @@ describe RecipientList do
     @token = api.authentication_request
   end
 
-  describe '.list' do
-    it 'should return an array' do
+  describe '.all' do
+    it 'should return an array of recipients' do
       recipient_list = RecipientList.new(@token, "https://private-e7ba6d-coolpayapi.apiary-mock.com/api/")
       expect(recipient_list.all).kind_of?(Array)
     end
