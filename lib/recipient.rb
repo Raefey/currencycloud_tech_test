@@ -12,7 +12,6 @@ class Recipient
 
   def create
     response = RestClient.post "#{url}recipients", values, headers
-    p response
   end
 
   private

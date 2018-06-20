@@ -14,7 +14,7 @@ describe Recipient do
         token,
         'https://private-e7ba6d-coolpayapi.apiary-mock.com/api/'
       )
-      expect(recipient.create).to be_truthy
+      expect(recipient.create).to be_an_instance_of(RestClient::Response)
     end
   end
 end
