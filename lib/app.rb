@@ -1,6 +1,7 @@
 require 'sinatra/base'
 require_relative 'api.rb'
 require_relative 'recipient.rb'
+require_relative 'recipient_list.rb'
 
 class Fakebook < Sinatra::Base
 
@@ -19,9 +20,9 @@ class Fakebook < Sinatra::Base
   end
 
   post '/new-recipient' do
-    contact = Recipient.new(params['new_recipient'], @token)
+    contact = Recipient.new(params['new_recipient'], session[:token])
     contact.create
-    redirect('/')
+    redirect('/recipients')
   end
 
   run! if app_file == $0
