@@ -1,4 +1,7 @@
 language: ruby
-rvm: '2.5.0'
+rvm: 2.5.0
 script:
-  - bundle exec rspec spec
+- bundle exec rspec spec
+before_install:
+- openssl aes-256-cbc -K $encrypted_113a53810f46_key -iv $encrypted_113a53810f46_iv
+  -in env.yml.enc -out config/env.yml -d
