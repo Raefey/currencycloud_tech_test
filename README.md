@@ -1,3 +1,9 @@
+# CurrencyCloud Coolpay API tech test
+
+[![Maintainability](https://api.codeclimate.com/v1/badges/dcca0f8e11e2c566a12b/maintainability)](https://codeclimate.com/github/Raefey/currencycloud_tech_test/maintainability)
+
+[![Test Coverage](https://api.codeclimate.com/v1/badges/dcca0f8e11e2c566a12b/test_coverage)](https://codeclimate.com/github/Raefey/currencycloud_tech_test/test_coverage)
+
 ## Scenario
 
 Coolpay is a new company that allows to easily send money to friends through their API.
