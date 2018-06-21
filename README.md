@@ -22,25 +22,25 @@ Coolpay API - [Coolpay](https://coolpayapi.docs.apiary.io/)
 ### User stories
 
 ```
-As a User
-I want to be able to Authenticate to Coolpay API
-So other people cannot send my money
+As an Engineer
+I want to be able to authenticate to Coolpay API
+So I am able to make requests
 
 As a User
-I want to be able to Add recipients
+I want to be able to add recipients
 So I can list my friends easily
 
 As a User
-I want to be able to Send Money
+I want to be able to send money
 So I can save time by not using my bank
 
 As a User
-I want to be send a confirmation message when a payment is successful
-So that I'm not worrying about losing money
+I want to see the status of a payment
+So that I know if my money has been received
 ```
 
 ### Challenges
-I'll outline the two most notable challenges.
+I'll outline the two most notable challenges I faced during the process.
 
 1. I didn't want to post my login details for the API to Github, so no problem; I just saved them as environmental variables in my env.yml and added it to a `.gitignore` file. Problem solved. However when I came to use Travis for continuous integration, it failed every Rspec test as it was not able to log into the API. I found a handy tool in Travis; which allows  you to encrypt a file. Then before Travis runs it's script you tell it to decrypt the file with a unique key, meaning it gains access to the environmental variables. It even saves the decrypted file under a name of your choosing. Meaning there are no problems with access to the env.yml file.
 
@@ -48,7 +48,7 @@ I'll outline the two most notable challenges.
 
 ### Installation
 
-I decided not to deploy my Web App, as I had gone to great lengths to hide my API keys, it seemed pointless to then go and deploy the app using my keys. However if you have your own key for the Coolpay API you can use my app here.
+I decided not to deploy my Web App, as I had gone to great lengths to hide my API keys, it seemed pointless to then go and deploy which would be using my login key. However if you have your own key for the Coolpay API you can use my app here.
 
 - Clone the Repo
 - Run Bundle install
@@ -60,15 +60,17 @@ API_KEY: 'YOUR_API_KEY_HERE'
 - Go to the project directory and run `rackup -p 4567`
 - Go to `local:host4567`
 
-To run tests do the above, then in the `currencycloud_tech_test` directory run RSpec
+To run tests; do the above, then in the `currencycloud_tech_test` directory run RSpec
 
 ### Final thoughts
 
-If I think of the API as it were a product there a few things I would change; I would first of all increase the information in the Response to avoid problems like the one I encountered with the user ID. I would also create a deleting function for deleting Recipients. Finally when making calls to the mock server in my tests, I would get the exact same response, no matter the Values or Headers, this allowed me to test that the API request was successful however I couldn't test if the variables I entered were being saved correctly, as the response was always the same. I enjoyed the project, as every part of the program was constantly making calls to the API which produced a few interesting challenges.
+If I think of the API as if it were a product there are a few things I would change; I would first of all increase the information in the Response to avoid problems like the one I encountered with the user ID. I would also create a deleting function for deleting Recipients. Finally I would change the response when making a call to the mock server. When making calls to the mock server in my tests, I would get the exact same response, no matter the Values or Headers, this allowed me to test that the API request was successful, however I couldn't test if the variables I entered were being saved correctly, as the response was always the same. I enjoyed the project, as every part of the program was constantly making calls to the API which produced a few interesting challenges.
 
-### If I had more time
 
-I would make the overall aesthetic a bit nicer and flow between the pages more intuitive. I would've added the ability to just pay a recipient from the recipient page with a pay button. It would've been nice to have a delete function, but I don't believe it was possible with the API.
+
+### If I had more time...
+
+I would make the overall aesthetic a bit nicer and flow between the pages more intuitive. I would've added the ability to pay a recipient from the recipient page with a pay button next to the name. It would've been nice to have a delete function, but I don't believe it was possible with the API.
 I would've tried to find a way to feature test the creation of payments and recipients without actually creating them as this made some features impossible to test without creating real recipients.
 
 ### Views
