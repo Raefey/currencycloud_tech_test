@@ -1,10 +1,6 @@
 # CurrencyCloud Coolpay API tech test
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/dcca0f8e11e2c566a12b/maintainability)](https://codeclimate.com/github/Raefey/currencycloud_tech_test/maintainability)
-
-[![Test Coverage](https://api.codeclimate.com/v1/badges/dcca0f8e11e2c566a12b/test_coverage)](https://codeclimate.com/github/Raefey/currencycloud_tech_test/test_coverage)
-
-## Scenario
+### Brief
 
 Coolpay is a new company that allows to easily send money to friends through their API.
 
@@ -14,8 +10,21 @@ You can find Coolpay documentation here: http://docs.coolpayapi.apiary.io/
 
 You will write a small app that uses Coolplay API in Ruby. The app should be able do the following:
 
+### Build status
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/dcca0f8e11e2c566a12b/maintainability)](https://codeclimate.com/github/Raefey/currencycloud_tech_test/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/dcca0f8e11e2c566a12b/test_coverage)](https://codeclimate.com/github/Raefey/currencycloud_tech_test/test_coverage)
 
+### Tech stack used
+Text editor - [Atom](https://atom.io/)
+
+Testing framework - [Rspec](http://rspec.info/)
+
+Continuous integration service - [Travis CI](https://travis-ci.org/)
+
+Code quality - [Code Climate](https://codeclimate.com/)
+
+Web Framework - [Sinatra](http://sinatrarb.com/)
 ### User stories
 
 ```
