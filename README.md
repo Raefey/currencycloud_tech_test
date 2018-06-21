@@ -72,7 +72,7 @@ I would make the overall aesthetic a bit nicer and flow between the pages more i
 I would've tried to find a way to feature test the creation of payments and recipients without actually creating them as this made some features impossible to test without creating real recipients.
 
 ### Views
- These were diagrams I used during the process of creating the app, the App didn't finish looking quite like these, but they helped me to visualise what I was making.
+ These were diagrams I used during the process of creating the app, the App didn't finish looking quite like these, but they helped me visualise what I was making.
 
 ![Index](./pictures/index_view.png)
 
