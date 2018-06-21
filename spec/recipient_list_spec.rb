@@ -17,9 +17,16 @@ describe RecipientList do
   end
 
   describe '.search' do
-    it 'should a user_id' do
+    it 'should return a user_id' do
       recipient_list = RecipientList.new(@token, "https://private-e7ba6d-coolpayapi.apiary-mock.com/api/")
       expect(recipient_list.search("Jake McFriend")).to eq("6e7b4cea-5957-11e6-8b77-86f30ca893d3")
+    end
+  end
+
+  describe '.search_by_id' do
+    it 'should return a name relating to the user ID' do
+      recipient_list = RecipientList.new(@token, "https://private-e7ba6d-coolpayapi.apiary-mock.com/api/")
+      expect(recipient_list.search_by_id("6e7b4cea-5957-11e6-8b77-86f30ca893d3")).to eq("Jake McFriend")
     end
   end
 end

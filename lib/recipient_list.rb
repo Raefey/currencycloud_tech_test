@@ -19,6 +19,11 @@ class RecipientList
     p eval(response.body)[:recipients][0][:id]
   end
 
+  def search_by_id(user_id)
+    user = all.select { |recipient| recipient[:id] == user_id }
+    user[0][:name]
+  end
+
   private
   def headers
     return {
