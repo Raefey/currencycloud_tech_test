@@ -8,7 +8,7 @@
   <body>
     <h2>Payments</h2>
       <% @payments.each do |payment| %>
-        <div>Amount:<%=payment[:amount]%> <%=payment[:currency]%>---Status: <%=payment[:status]%></div>
+        <div>Amount:<%=payment[:amount]%> <%=payment[:currency]%>---Status: <%=payment[:status]%> To: <%=payment[:name]%></div>
     <%end%>
 
     <form method="get" action="/new-payment">

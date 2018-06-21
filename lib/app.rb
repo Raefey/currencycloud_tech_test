@@ -40,7 +40,9 @@ class Fakebook < Sinatra::Base
   end
 
   get '/payments' do
-    @payments = PaymentList.new(session[:token]).all
+    payment_list = PaymentList.new(session[:token])
+    payment_list_array = payment_list.all
+    @payments = payment_list.name_field_creator(payment_list_array)
     erb(:payments)
   end
 

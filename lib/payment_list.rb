@@ -17,7 +17,7 @@ class PaymentList
   end
 
   def name_field_creator(array)
-    array.each {|payment|  payment.merge!("name": id_converter(payment[:id]))}
+    array.each {|payment|  payment.merge!("name": id_converter(payment[:recipient_id]))}
   end
 
   private
