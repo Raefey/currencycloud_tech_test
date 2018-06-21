@@ -14,6 +14,11 @@ class RecipientList
     p eval(response.body)[:recipients]
   end
 
+  def search(name)
+    response = RestClient.get "#{url}recipients?name=#{name}", headers
+    p eval(response.body)[:recipients][0][:id]
+  end
+
   private
   def headers
     return {

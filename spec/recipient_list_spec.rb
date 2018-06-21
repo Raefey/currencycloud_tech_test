@@ -15,4 +15,11 @@ describe RecipientList do
       expect(recipient_list.all).kind_of?(Array)
     end
   end
+
+  describe '.search' do
+    it 'should a user_id' do
+      recipient_list = RecipientList.new(@token, "https://private-e7ba6d-coolpayapi.apiary-mock.com/api/")
+      expect(recipient_list.search("Jake McFriend")).to eq("6e7b4cea-5957-11e6-8b77-86f30ca893d3")
+    end
+  end
 end
