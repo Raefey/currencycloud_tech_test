@@ -68,8 +68,18 @@ API_KEY: 'YOUR_API_KEY_HERE'
 - Go to the project directory and run `rackup -p 4567`
 - Go to `local:host4567`
 
+To run tests do the above, then in the `currencycloud_tech_test` directory run RSpec
+
+### Final thoughts
+
+If I think of the API as it were a product there a few things I would change; I would first of all increase the information in the Response to avoid problems like the one I encountered with the user ID. I would also create a deleting function for deleting Recipients. Finally when making calls to the mock server in my tests, I would get the exact same response, no matter the Values or Headers, this allowed me to test that the API request was successful however I couldn't test if the variables I entered were being saved correctly, as the response was always the same. I enjoyed the project, as every part of the program was constantly making calls to the API which produced a few interesting challenges.
+
+### If I had more time
+
+I would make the overall aesthetic a bit nicer and flow between the pages more intuitive. I would've added the ability to just pay a recipient from the recipient page with a pay button. It would've been nice to have a delete function, but I don't believe it was possible with the API
 
 ### Views
+ These were diagrams I used during the process of creating the app, the App didn't finish looking quite like these, but they helped me to visualise what I was making.
 
 ![Index](./pictures/index_view.png)
 
