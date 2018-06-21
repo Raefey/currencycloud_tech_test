@@ -54,6 +54,21 @@ I'll outline the two most notable challenges.
 
 2. When posting the payments, I would use the response from the API and access the values from each payment hash, using the relevant keys. I would iterate through the array of payments, posting information I thought would be useful to display, such as: Amount, Currency and Status. However I thought knowing who you had paid would be useful, this information was not in the API response. The recipient ID was in the response, however it is unreasonable for you to assume your users will know all their friends unique user IDs. So the solution is simple; search for user by ID and then print the name paired to it, except there is no API request to search by user ID. So I made my own method in the *RecipientList* class to search for a user by ID, which would return the name of that user. I used this method in my *PaymentList class*, by extracting the user ID of a payment, searching the recipient list for that ID and then adding a new key value pair to that payment with the name of the user; allowing me to print the name next to the payment. The classes became slightly too involved with each other for my liking, however it was a feature I strongly believed should be added, and was unable to do it using just the API response.
 
+### Installation
+
+I decided not to deploy my Web App, as I had gone to great lengths to hide my API keys, it seemed pointless to then go and deploy the app using my keys. However if you have your own key for the Coolpay API you can use my app here.
+
+- Clone the Repo
+- Run Bundle install
+- Add an env.yml file with the following:
+```
+API_USERNAME: 'YOUR_USERNAME_HERE'
+API_KEY: 'YOUR_API_KEY_HERE'
+```
+- Go to the project directory and run `rackup -p 4567`
+- Go to `local:host4567`
+
+
 ### Views
 
 ![Index](./pictures/index_view.png)
