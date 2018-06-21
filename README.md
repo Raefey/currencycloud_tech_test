@@ -76,7 +76,8 @@ If I think of the API as it were a product there a few things I would change; I 
 
 ### If I had more time
 
-I would make the overall aesthetic a bit nicer and flow between the pages more intuitive. I would've added the ability to just pay a recipient from the recipient page with a pay button. It would've been nice to have a delete function, but I don't believe it was possible with the API
+I would make the overall aesthetic a bit nicer and flow between the pages more intuitive. I would've added the ability to just pay a recipient from the recipient page with a pay button. It would've been nice to have a delete function, but I don't believe it was possible with the API.
+I would've tried to find a way to feature test the creation of payments and recipients without actually creating them as this made some features impossible to test without creating real recipients.
 
 ### Views
  These were diagrams I used during the process of creating the app, the App didn't finish looking quite like these, but they helped me to visualise what I was making.
