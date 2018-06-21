@@ -1,21 +1,62 @@
-
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Fakebook</title>
+    <title>Coolpay</title>
+    <style>
+      h2 {
+        font-weight: 200;
+        font-size: 36px;
+        text-align: center;
+        font-family: Avenir;
+      }
+      p {
+        font-weight: 200;
+        font-size: 15px;
+        text-align: center;
+        font-family: Avenir;
+      }
+      form {
+        text-align: center;
+      }
+      input {
+        text-align: left;
+        font-family: Avenir;
+        font-weight: 200;
+      }
+      input[type=submit] {
+        padding:5px 15px;
+        background:#ccc;
+        border:0 none;
+        cursor:pointer;
+        border-radius: 5px;
+        text-align: center;
+        font-family: Avenir;
+        font-weight: 200;
+      }
+      button {
+        padding:5px 15px;
+        background:#ff9d2d;
+        border:0 none;
+        cursor:pointer;
+        border-radius: 5px;
+        text-align: center;
+        font-family: Avenir;
+        font-weight: 200;
+      }
+    </style>
   </head>
   <body>
     <h2>Payments</h2>
       <% @payments.each do |payment| %>
-        <div>Amount:<%=payment[:amount]%> <%=payment[:currency]%>---Status: <%=payment[:status]%> To: <%=payment[:name]%></div>
+        <p>Amount:<%=payment[:amount]%> <%=payment[:currency]%>---Status: <%=payment[:status]%> To: <%=payment[:name]%></p>
     <%end%>
 
-    <form method="get" action="/new-payment">
+    <p><form method="get" action="/new-payment">
         <button type="submit">New Payment</button>
-    </form>
-    <form method="get" action="/recipients">
+    </form></p>
+    <p><form method="get" action="/recipients">
         <button type="submit">Recipients</button>
-    </form>
+    </form></p>
   </body>
 </html>
