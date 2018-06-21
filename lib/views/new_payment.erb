@@ -1,13 +1,18 @@
-<form action='/new-payment' method='post'>
+<!DOCTYPE html>
+<html>
+<body>
+
+<form action='/create-new-payment' method='post'>
   <p><input type="text" name="name"></p>
   <input type="number" name="amount" min="0">
-  <p>
-  <select>
-    <option value="volvo">GBP</option>
-    <option value="saab">USD</option>
-    <option value="saab">CHF</option>
-    <option value="saab">JPY</option>
+  <select name="currency">
+    <option value="GBP">GBP</option>
+    <option value="USD">USD</option>
+    <option value="CHF">CHF</option>
+    <option value="JPY">JPY</option>
   </select>
-  </p>
   <input type="submit" value="Pay">
 </form>
+
+</html>
+</body>

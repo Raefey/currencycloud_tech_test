@@ -11,7 +11,7 @@ class PaymentList
 
   def all
     response = RestClient.get "#{url}payments", headers
-    p eval(response.body)
+    p eval(response.body)[:payments]
   end
 
   private
