@@ -4,7 +4,7 @@ require_relative '../lib/payment.rb'
 
 describe Payment do
 
-  subject(:payment) { described_class.new }
+  subject(:payment) { described_class.new(@token, @unique_id, 10.50, "GBP", "https://private-e7ba6d-coolpayapi.apiary-mock.com/api/") }
 
   before(:each) do
     api = Api.new
@@ -15,7 +15,6 @@ describe Payment do
 
   describe '.create' do
     it 'should add a payment to the list of existing payments' do
-      payment = Payment.new(@token, @unique_id, 10.50, "GBP", "https://private-e7ba6d-coolpayapi.apiary-mock.com/api/")
       expect(payment.create[:payment][:amount]).to eq("10.5")
     end
   end

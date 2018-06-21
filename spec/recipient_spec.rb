@@ -3,7 +3,7 @@ require_relative '../lib/api.rb'
 
 describe Recipient do
 
-  subject(:recipient) { described_class.new }
+  subject(:recipient) { described_class.new(@token, 'Jake McFriend', 'https://private-e7ba6d-coolpayapi.apiary-mock.com/api/') }
 
   before(:each) do
     api = Api.new
@@ -12,7 +12,6 @@ describe Recipient do
 
   describe '.create' do
     it 'should add a recipient to the exsisting list' do
-      recipient = Recipient.new(@token, 'Jake McFriend', 'https://private-e7ba6d-coolpayapi.apiary-mock.com/api/')
       expect(recipient.create[:recipient][:name]).to eq('Jake McFriend')
     end
   end

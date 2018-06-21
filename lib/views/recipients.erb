@@ -15,8 +15,7 @@
     <title>Fakebook</title>
   </head>
   <body>
-    Recipients
-
+    <h1>Recipients</h1>
       <% @recipients.each do |recipient| %>
         <div><%=recipient[:name]%></div>
     <%end%>
@@ -29,6 +28,9 @@
 
     <form method="get" action="/new-payment">
         <button type="submit">New Payment</button>
+    </form>
+    <form method="get" action="/payments">
+        <button type="submit">Payments</button>
     </form>
   </body>
 </html>

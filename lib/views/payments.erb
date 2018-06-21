@@ -6,13 +6,16 @@
     <title>Fakebook</title>
   </head>
   <body>
-    Payments<br>
+    <h2>Payments</h2>
       <% @payments.each do |payment| %>
         <div>Amount:<%=payment[:amount]%> <%=payment[:currency]%>---Status: <%=payment[:status]%></div>
     <%end%>
 
     <form method="get" action="/new-payment">
         <button type="submit">New Payment</button>
+    </form>
+    <form method="get" action="/recipients">
+        <button type="submit">Recipients</button>
     </form>
   </body>
 </html>
