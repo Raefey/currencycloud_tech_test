@@ -25,6 +25,8 @@ Continuous integration service - [Travis CI](https://travis-ci.org/)
 Code quality - [Code Climate](https://codeclimate.com/)
 
 Web Framework - [Sinatra](http://sinatrarb.com/)
+
+Coolpay API - [Coolpay](https://coolpayapi.docs.apiary.io/)
 ### User stories
 
 ```
