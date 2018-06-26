@@ -52,7 +52,7 @@ I decided not to deploy my Web App, as I had gone to great lengths to hide my AP
 
 - Clone the Repo
 - Run Bundle install
-- Add an env.yml file to the config with the following:
+- Add an `env.yml` file to the `config` folder with the following:
 ```
 API_USERNAME: 'YOUR_USERNAME_HERE'
 API_KEY: 'YOUR_API_KEY_HERE'
